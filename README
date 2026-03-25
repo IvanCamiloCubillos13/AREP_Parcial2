@@ -2,11 +2,21 @@
 ---
 
 ## Como correrlo en EC2
+Para correr el proyecto es necesario que todas las instancias esten en running en AWS. Se opto por subir los archivos ya completos. Para poder ejecutarlos de la siguiente manera:
+En MathService1:
+java -jar Math-0.0.1-SNAPSHOT.jar
 
+En MathService2:
+java -jar Math-0.0.1-SNAPSHOT.jar
+
+En Proxy:
+export SERVICE_ACTIVE=http://ec2-98-86-180-227.compute-1.amazonaws.com #La URL de MathService1
+export SERVICE_PASSIVE=http:/ec2-44-193-208-135.compute-1.amazonaws.com #La URL de MathService2
+java -jar proxy-0.0.1-SNAPSHOT.jar
 ---
 
 ## Evidencias
-
+Proxy corriendo en AWS. Imagenes adjuntas en carpeta /img.
 
 ---
 

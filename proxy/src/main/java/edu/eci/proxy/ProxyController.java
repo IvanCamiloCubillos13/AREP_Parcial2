@@ -8,7 +8,7 @@ public class ProxyController {
 
     private final ProxyService proxyService = new ProxyService();
 
-    @GetMapping("/math")
+    @GetMapping("/tribonacci")
     public String proxy(@RequestParam("value") String value) {
         return proxyService.forwardRequest(value);
     }

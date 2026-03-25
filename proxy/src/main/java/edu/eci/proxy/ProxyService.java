@@ -12,7 +12,7 @@ public class ProxyService {
 
     public String forwardRequest(String value) {
 
-        String endpoint = "/math?value=" + value;
+        String endpoint = "/tribonacci?value=" + value;
 
         try {
             System.out.println("Calling ACTIVE service");
@@ -30,7 +30,6 @@ public class ProxyService {
     }
 
     private String callService(String urlStr) throws Exception {
-
         URL url = new URL(urlStr);
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
 
