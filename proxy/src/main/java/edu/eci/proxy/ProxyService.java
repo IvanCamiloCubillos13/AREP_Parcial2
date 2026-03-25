@@ -12,7 +12,7 @@ public class ProxyService {
 
     public String forwardRequest(String value) {
 
-        String endpoint = "/tribonacci?value=" + value;
+        String endpoint = "/tribonacci?numero=" + value;
 
         try {
             System.out.println("Calling ACTIVE service");
