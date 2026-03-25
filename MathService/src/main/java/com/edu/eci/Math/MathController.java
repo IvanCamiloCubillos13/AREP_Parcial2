@@ -16,9 +16,10 @@ public class MathController {
 
     public LinkedList<Integer> getTribonacci(int numero){
         LinkedList<Integer> secuencia = new LinkedList<>();
-        for(int i=0;i<numero;i++){
+        for(int i=0;i<=numero+1;i++){
             secuencia.add(tribonacciNum(i));
         }
+        secuencia.remove();
         return secuencia;
     }
 
@@ -26,6 +27,9 @@ public class MathController {
         if(numero<0){
             return 0;
         }
-        return tribonacciNum(numero-1) + tribonacciNum(numero-2)+numero;
+        if(numero==3){
+            return tribonacciNum(numero-1) + tribonacciNum(numero-2)+1;
+        }
+        return tribonacciNum(numero-1) + tribonacciNum(numero-2)+tribonacciNum(numero-3);
     }
 }
